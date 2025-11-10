@@ -19,13 +19,17 @@
 ### Alexis Bélisle:
 1. Tâches réalisées
 - Début du projet Game of Life avec Rust
+- Game of Life complet sur Rust
+- Deploiement de Game of Life sur un serveur Web avec WebAssembly
 
 2. Apprentissages avec IA
 - Appris les principes de base de WebAssembly
 - Trouver des idées de projet
 - Raffiner les idées
 - Comprendre les étapes de bases pour faire une page Web ayant du WASM
+- Apprentissage Rust
 
 3. Difficultés rencontrées
+- Faire le lien entre rust et WebAssembly
 
 4. Objectifs de la semaine suivante

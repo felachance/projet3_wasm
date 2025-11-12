@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Game of Life</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #controls {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        canvas {
+            background: #111;
+            image-rendering: pixelated;
+        }
+
+        button,
+        input[type=range] {
+            margin: 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="controls">
+        <button id="play-pause">Pause</button>
+        <button id="randomize">Randomize</button>
+        <button id="clear">Clear</button>
+        <label style="color: white;">Speed: <input type="range" id="speed" min="1" max="200" value="30"></label>
+    </div>
+    <canvas id="game"></canvas>
+
+    <script type="module">
+        import init, { Universe } from "../pkg/wasm_game_of_life.js";
+
+        async function run() {
+            await init();
+
+            const width = 150;  // columns
+            const height = 90;  // rows
+
+            // Responsive cell size
+            const maxWidth = window.innerWidth - 40;
+            const maxHeight = window.innerHeight - 100;
+            const cellSize = Math.floor(Math.min(maxWidth / width, maxHeight / height));
+
+            const universe = new Universe(width, height);
+            const canvas = document.getElementById("game");
+            const ctx = canvas.getContext("2d");
+            canvas.width = width * cellSize;
+            canvas.height = height * cellSize;
+
+            let animationId = null;
+            let speed = 30; // ticks per second
+
+            function draw() {
+                const cells = universe.get_cells();
+
+                ctx.fillStyle = "#111";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                ctx.fillStyle = "#0f0";
+                for (let row = 0; row < height; row++) {
+                    for (let col = 0; col < width; col++) {
+                        if (cells[row * width + col] === 1) {
+                            ctx.fillRect(col * cellSize, row * cellSize, cellSize, cellSize);
+                        }
+                    }
+                }
+            }
+
+            function renderLoop() {
+                universe.tick();
+                draw();
+                animationId = setTimeout(renderLoop, 1000 / speed);
+            }
+
+            renderLoop(); // start animation
+
+            // --- Controls ---
+            const playPauseButton = document.getElementById("play-pause");
+            let isPaused = false;
+            playPauseButton.addEventListener("click", () => {
+                if (isPaused) {
+                    renderLoop();
+                    playPauseButton.textContent = "Pause";
+                } else {
+                    clearTimeout(animationId);
+                    playPauseButton.textContent = "Play";
+                }
+                isPaused = !isPaused;
+            });
+
+            const speedSlider = document.getElementById("speed");
+            speedSlider.addEventListener("input", (event) => {
+                speed = parseInt(event.target.value, 10);
+            });
+
+            document.getElementById("randomize").addEventListener("click", () => {
+                universe.randomize();
+                draw();
+            });
+
+            document.getElementById("clear").addEventListener("click", () => {
+                universe.clear();
+                draw();
+            });
+
+            window.addEventListener("resize", () => {
+                const maxWidth = window.innerWidth - 40;
+                const maxHeight = window.innerHeight - 100;
+                const newCellSize = Math.floor(Math.min(maxWidth / width, maxHeight / height));
+                canvas.width = width * newCellSize;
+                canvas.height = height * newCellSize;
+                draw();
+            });
+
+            let isDrawing = false;
+
+            canvas.addEventListener("mousedown", (event) => {
+                isDrawing = true;
+                toggleCell(event);
+            });
+
+            canvas.addEventListener("mouseup", () => {
+                isDrawing = false;
+            });
+
+            canvas.addEventListener("mousemove", (event) => {
+                if (isDrawing) toggleCell(event);
+            });
+
+            function toggleCell(event) {
+                const rect = canvas.getBoundingClientRect();
+                const x = event.clientX - rect.left;
+                const y = event.clientY - rect.top;
+
+                const col = Math.floor(x / cellSize);
+                const row = Math.floor(y / cellSize);
+
+                universe.toggle_cell(row, col);
+                draw();
+            }
+
+        }
+
+        run();
+    </script>
+</body>
+
+</html>

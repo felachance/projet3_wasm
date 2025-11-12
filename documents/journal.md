@@ -1,7 +1,11 @@
 # 10 novembre 2025
 ### Félix Lachance:
 1. Tâches réalisées
-- 
+- Trouvé les idées de projet
+- Compris les principes de WebAssembly
+- Exploré les utilisations de WASM
+- Exploré les avantages de WASM
+- Exploré les alternatifs à WASM
 
 2. Apprentissages avec IA
 - Appris les principes de base de WebAssembly
@@ -13,7 +17,8 @@
 - Compréhension de base de WASM
 
 4. Objectifs de la semaine suivante
-- 
+- Commencer le programme de Visualisation 3D d'un .obj
+- Exporter mon jeu Unity 2D déjà fait sur WASM
 
 
 ### Alexis Bélisle:

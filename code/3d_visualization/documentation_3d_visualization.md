@@ -1,0 +1,1 @@
+emcc main.cpp -o index.js -s USE_WEBGL2=1 -O2 -s MODULARIZE=1 -s EXPORT_ES6=1 -s EXPORTED_FUNCTIONS="['_malloc','_free','_LoadOBJFromMemory', '_main']" -s EXPORTED_RUNTIME_METHODS="['cwrap','ccall','HEAPU8']" -s INITIAL_MEMORY=67108864

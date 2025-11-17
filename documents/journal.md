@@ -38,7 +38,8 @@
 - Faire le lien entre rust et WebAssembly
 
 4. Objectifs de la semaine suivante
-
+- Améliorer Game of Life pour une meilleur démonstration
+- Documentation de Game of Life
 
 # 12 novembre 2025
 ### Félix Lachance:
@@ -78,12 +79,15 @@
 
 ### Alexis Bélisle:
 1. Tâches réalisées
-
+- Amélioration Game of Life, ajout de plus de boutons
+- Documentation de Game of Life
 
 2. Apprentissages avec IA
-
+- Partager mon site WASM, quel fichier et outils est nécessaire
 
 3. Difficultés rencontrées
-
+- Un .gitignore c'est fait automatiquement et empêchais le bon fonctionnement de l'application Web
+- Bogue Rust
 
 4. Objectifs de la semaine suivante
+- Rapport final

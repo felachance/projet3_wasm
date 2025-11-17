@@ -81,9 +81,11 @@
 1. Tâches réalisées
 - Amélioration Game of Life, ajout de plus de boutons
 - Documentation de Game of Life
+- Première section du rapport final
 
 2. Apprentissages avec IA
 - Partager mon site WASM, quel fichier et outils est nécessaire
+- Élaboration du fonctionnement technique de Wasm
 
 3. Difficultés rencontrées
 - Un .gitignore c'est fait automatiquement et empêchais le bon fonctionnement de l'application Web

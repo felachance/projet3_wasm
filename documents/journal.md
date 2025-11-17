@@ -38,3 +38,52 @@
 - Faire le lien entre rust et WebAssembly
 
 4. Objectifs de la semaine suivante
+
+
+# 12 novembre 2025
+### Félix Lachance:
+1. Tâches réalisées
+- En dehors du cours, fini le jeu Unity
+- Build en WebGL
+- Déboguage
+
+2. Apprentissages avec IA
+- Principes de jeu (algorithmes de mouvement des PNJ)
+- Fonctions de Unity
+
+3. Difficultés rencontrées
+- Déboguage
+- Compréhension du code généré par l'IA
+- Comportements inattendus
+- Game design
+
+4. Objectifs de la semaine suivante
+- Programme de visualisation 3D
+- Documentation
+
+
+# 17 novembre 2025
+### Félix Lachance:
+1. Tâches réalisées
+
+
+2. Apprentissages avec IA
+
+
+3. Difficultés rencontrées
+
+
+4. Objectifs de la semaine suivante
+- Documentation
+
+### Alexis Bélisle:
+1. Tâches réalisées
+
+
+2. Apprentissages avec IA
+
+
+3. Difficultés rencontrées
+
+
+4. Objectifs de la semaine suivante

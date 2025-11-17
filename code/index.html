@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Projet3 Demos</title>
+	<style>
+		:root{--bg:#0f1724;--card:#0b1220;--accent:#60a5fa;--muted:#94a3b8;--glass:rgba(255,255,255,0.03)}
+		*{box-sizing:border-box}
+		body{margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#071028 0%,var(--bg) 100%);color:#e6eef8;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px}
+		.wrap{width:100%;max-width:1100px}
+		header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+		h1{font-size:1.6rem;margin:0}
+		p.lead{margin:4px 0 0;color:var(--muted)}
+		.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+		.card{background:linear-gradient(180deg,var(--card),rgba(11,18,32,0.9));padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(3,7,18,0.6);border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:12px}
+		.card h3{margin:0;font-size:1.05rem}
+		.card p{margin:0;color:var(--muted);font-size:0.95rem;line-height:1.3}
+		.actions{margin-top:auto;display:flex;gap:10px}
+		.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:9px;background:var(--glass);color:var(--accent);text-decoration:none;font-weight:600;border:1px solid rgba(96,165,250,0.12)}
+		.btn.secondary{background:transparent;color:#cbd5e1;border:1px solid rgba(255,255,255,0.04)}
+		footer{margin-top:20px;color:var(--muted);font-size:0.9rem;text-align:center}
+		@media (max-width:520px){h1{font-size:1.2rem}}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header>
+			<div>
+				<h1>Projet3 — WebAssembly & Demos</h1>
+				<p class="lead">Quick access to the three demo projects in this workspace.</p>
+			</div>
+			<div style="text-align:right">
+				<small style="color:var(--muted)">Updated: Nov 2025</small>
+			</div>
+		</header>
+
+		<main class="grid">
+			<article class="card">
+				<h3>3D Visualization</h3>
+				<p>Interactive 3D visualization demo. Opens the 3D demo folder where the project and documentation live.</p>
+				<div class="actions">
+					<a class="btn" href="3d_visualization/">Open demo</a>
+					<a class="btn secondary" href="3d_visualization/documentation_3d_visualization.md">Docs</a>
+				</div>
+			</article>
+
+			<article class="card">
+				<h3>Unity 2D Game</h3>
+				<p>Unity Web build (PWA). The build files are in `unity_2d/Build` and the player page is `unity_2d/index.html`.</p>
+				<div class="actions">
+					<a class="btn" href="unity_2d/index.html">Open demo</a>
+					<a class="btn secondary" href="unity_2d/documentation_unity_2d.md">Docs</a>
+				</div>
+			</article>
+
+			<article class="card">
+				<h3>Game of Life (WASM)</h3>
+				<p>WASM implementation of Conway's Game of Life. The web frontend is under `game_of_life/wasm_game_of_life/web`.</p>
+				<div class="actions">
+					<a class="btn" href="game_of_life/wasm_game_of_life/web/">Open demo</a>
+					<a class="btn secondary" href="game_of_life/documentation_game_of_life.md">Docs</a>
+				</div>
+			</article>
+		</main>
+
+		<footer>
+			- Local files are served statically. Use a local HTTP server to test (for WASM and Unity builds).
+		</footer>
+	</div>
+</body>
+</html>
+

@@ -1,5 +1,5 @@
 # 10 novembre 2025
-### Félix Lachance:
+### Félix Lachance :
 1. Tâches réalisées
 - Trouvé les idées de projet
 - Compris les principes de WebAssembly
@@ -25,7 +25,7 @@
 1. Tâches réalisées
 - Début du projet Game of Life avec Rust
 - Game of Life complet sur Rust
-- Deploiement de Game of Life sur un serveur Web avec WebAssembly
+- Déploiement de Game of Life sur un serveur Web avec WebAssembly
 
 2. Apprentissages avec IA
 - Appris les principes de base de WebAssembly
@@ -35,10 +35,10 @@
 - Apprentissage Rust
 
 3. Difficultés rencontrées
-- Faire le lien entre rust et WebAssembly
+- Faire le lien entre Rust et WebAssembly
 
 4. Objectifs de la semaine suivante
-- Améliorer Game of Life pour une meilleur démonstration
+- Améliorer Game of Life pour une meilleure démonstration
 - Documentation de Game of Life
 
 # 12 novembre 2025
@@ -90,11 +90,11 @@
 - Première section du rapport final
 
 2. Apprentissages avec IA
-- Partager mon site WASM, quel fichier et outils est nécessaire
+- Partager mon site WASM, quels fichier et outils est nécessaires
 - Élaboration du fonctionnement technique de Wasm
 
 3. Difficultés rencontrées
-- Un .gitignore c'est fait automatiquement et empêchais le bon fonctionnement de l'application Web
+- Un. gitignore c'est fait automatiquement et empêchais le bon fonctionnement de l'application Web
 - Bogue Rust
 
 4. Objectifs de la semaine suivante

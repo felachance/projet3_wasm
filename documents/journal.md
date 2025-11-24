@@ -93,3 +93,26 @@
 
 4. Objectifs de la semaine suivante
 - Rapport final
+
+
+# 24 novembre 2025
+### Félix Lachance:
+1. Tâches réalisées
+- Rédaction des principales découvertes du rapport final
+- Rédaction de la réflexion critique sur le projet
+- Correction et révision du rapport final
+- Démonstration final au professeur
+
+2. Apprentissages avec IA
+- Révision des notions apprises
+
+
+### Alexis Bélisle
+1. Tâches réalisées
+- Rédaction de l'apport de l'intelligence artificielle dans le rapport final
+- Rédaction des limites de la technologie dans le rapport final
+- Correction et révision du rapport final
+- Démonstration final au professeur
+
+2. Apprentissages avec IA
+- Révision des notions apprises

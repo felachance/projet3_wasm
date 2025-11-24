@@ -46,14 +46,14 @@
 1. Tâches réalisées
 - En dehors du cours, fini le jeu Unity
 - Build en WebGL
-- Déboguage
+- Débogage
 
 2. Apprentissages avec IA
 - Principes de jeu (algorithmes de mouvement des PNJ)
 - Fonctions de Unity
 
 3. Difficultés rencontrées
-- Déboguage
+- Débogage
 - Compréhension du code généré par l'IA
 - Comportements inattendus
 - Game design
@@ -66,13 +66,19 @@
 # 17 novembre 2025
 ### Félix Lachance:
 1. Tâches réalisées
-
+- Commencé et fini la visualisation 3D en C++
+- Débogage
+- Page web à la racine du site
 
 2. Apprentissages avec IA
-
+- Apprentissage des compilateurs C++ -> WASM
+- Shaders de OpenGL
+- Opérations de matrices 3D
 
 3. Difficultés rencontrées
-
+- Compilateur (paramètres)
+- Communication JS <-> WASM
+- Débogage
 
 4. Objectifs de la semaine suivante
 - Documentation
